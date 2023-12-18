@@ -4,7 +4,7 @@ backend:
   phases:
     build:
       commands:
-        - echo 'aaaaaa'
+        - echo 'backend build skip'
 
 frontend:
   phases:
