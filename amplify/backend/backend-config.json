@@ -1,1 +1,128 @@
-{}
+{
+  "api": {
+    "translationApps": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "speechToText"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "translation"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "textToSpeech"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "speechToText": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "textToSpeech": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "translation": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_speechToText_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "speechToText"
+        }
+      ]
+    },
+    "AMPLIFY_function_speechToText_openaiApiKey": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "speechToText"
+        }
+      ]
+    },
+    "AMPLIFY_function_speechToText_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "speechToText"
+        }
+      ]
+    },
+    "AMPLIFY_function_textToSpeech_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "textToSpeech"
+        }
+      ]
+    },
+    "AMPLIFY_function_textToSpeech_openaiApiKey": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "textToSpeech"
+        }
+      ]
+    },
+    "AMPLIFY_function_textToSpeech_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "textToSpeech"
+        }
+      ]
+    },
+    "AMPLIFY_function_translation_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "translation"
+        }
+      ]
+    },
+    "AMPLIFY_function_translation_openaiApiKey": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "translation"
+        }
+      ]
+    },
+    "AMPLIFY_function_translation_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "translation"
+        }
+      ]
+    }
+  }
+}

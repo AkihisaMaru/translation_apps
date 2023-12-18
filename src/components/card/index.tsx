@@ -28,7 +28,7 @@ const Card = React.memo(({title, children, blob, callback}: Props) => {
             <Typography variant="h5" component="div">
                 {title}
             </Typography>
-            <Box width={160} bgcolor='red'>
+            <Box width={160}>
               <Select callback={callback}/>
             </Box>
           </Box>
@@ -41,7 +41,6 @@ const Card = React.memo(({title, children, blob, callback}: Props) => {
             flexDirection="row"
             justifyContent="space-between"
             gap="8px"
-            bgcolor='pink'
             margin='8px'
           >
             <Typography variant='body1'>{children}</Typography>

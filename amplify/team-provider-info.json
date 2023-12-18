@@ -10,6 +10,28 @@
       "StackName": "amplify-translationapps-dev-20110",
       "StackId": "arn:aws:cloudformation:ap-northeast-1:401428569436:stack/amplify-translationapps-dev-20110/0baacde0-9dc7-11ee-9dff-06bc54dba941",
       "AmplifyAppId": "d3k2r73kzq19ds"
+    },
+    "categories": {
+      "function": {
+        "speechToText": {
+          "openaiApiKey": "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",
+          "deploymentBucketName": "amplify-translationapps-dev-20110-deployment",
+          "s3Key": "amplify-builds/speechToText-64546b2f59444f693463-build.zip"
+        },
+        "translation": {
+          "openaiApiKey": "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",
+          "deploymentBucketName": "amplify-translationapps-dev-20110-deployment",
+          "s3Key": "amplify-builds/translation-42623270597731717078-build.zip"
+        },
+        "textToSpeech": {
+          "openaiApiKey": "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",
+          "deploymentBucketName": "amplify-translationapps-dev-20110-deployment",
+          "s3Key": "amplify-builds/textToSpeech-38682f73564832634669-build.zip"
+        }
+      },
+      "api": {
+        "translationApps": {}
+      }
     }
   }
 }

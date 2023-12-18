@@ -1,0 +1,14 @@
+{
+  "lambdaLayers": [
+    {
+      "type": "ExternalLayer",
+      "arn": "arn:aws:lambda:ap-northeast-1:401428569436:layer:python-openai-layer:1"
+    }
+  ],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "openaiApiKey",
+      "environmentVariableName": "OPENAI_API_KEY"
+    }
+  ]
+}

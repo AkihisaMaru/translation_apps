@@ -13,7 +13,7 @@ export function Layout() {
       justifyContent="center"
       width="100%"
       height="100vh"
-      minHeight='800px'
+      minHeight='700px'
       bgcolor="#a5a5cf28"
     >
       <Box

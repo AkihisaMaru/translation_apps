@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "paths": {
+    "/speech-to-text": {
+      "name": "/speech-to-text",
+      "lambdaFunction": "speechToText",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/translation": {
+      "name": "/translation",
+      "lambdaFunction": "translation",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/text-to-speech": {
+      "name": "/text-to-speech",
+      "lambdaFunction": "textToSpeech",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

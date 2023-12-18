@@ -23,13 +23,12 @@ export function Translation(){
         width='100%'
         height='100%'
         maxHeight='1300px'
-        minHeight='800px'
+        minHeight='700px'
         position='relative'
-        bgcolor='red'
       >
         <Box
           position='absolute'
-          bottom='30px'
+          bottom='80px'
           left='50%'
           sx={{
             transform: 'translateX(-50%)'
@@ -40,13 +39,12 @@ export function Translation(){
         <Box
           display='flex'
           flexDirection='column'
-          bgcolor='blue'
           margin='16px'
           gap='24px'
           flex={1}
         >
           <Title>Translation Apps</Title>
-          <Box bgcolor='green' width='100%' height='35%'>
+          <Box width='100%' height='30%'>
             <Card title='src' blob={undefined} callback={setSrcLang}>
               card1
             </Card>
@@ -54,7 +52,7 @@ export function Translation(){
           <Box display="flex" flex="row" justifyContent="center">
             <SyncIcon fontSize='large'/>
           </Box>
-          <Box bgcolor='green' width='100%' height='35%'>
+          <Box width='100%' height='30%'>
             <Card title='dst' blob={undefined} callback={setDstLang}>
               card2
             </Card>
