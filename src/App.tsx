@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import { Layout } from "./layout";
+import { ThemeProvider, createTheme } from "@mui/material";
+import { Translation } from "./pages/translation";
+import { Document } from "./pages/document";
+import { RecoilRoot } from "recoil";
+
+export default function App() {
+  const theme = createTheme({
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 600,
+        md: 900,
+        lg: 1200,
+        xl: 1536,
+      },
+    },
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RecoilRoot>
+      <ThemeProvider theme={theme}>
+        <Router>
+          <Routes>
+            <Route element={<Layout />}>
+              <Route path="/translations" element={<Translation />} />
+              <Route path="/documents" element={<Document />} />
+            </Route>
+            <Route path="/*" element={<Navigate replace to="translations" />} />
+          </Routes>
+        </Router>
+      </ThemeProvider>
+    </RecoilRoot>
   );
 }
-
-export default App;
